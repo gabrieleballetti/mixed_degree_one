@@ -296,7 +296,7 @@ for P in list_nd do
 end for;
 
 //------------------------------------------------------------------------------
-// Filter the couples
+// Filter the couples keeping only exceptional ones
 //------------------------------------------------------------------------------
 
 exceptional_couples:=couples;
@@ -333,7 +333,7 @@ for c in exceptional_couples do
 	end if;
 end for;
 
-couples:=exceptional_couple_bis;
+couples:=exceptional_couple_bis; //32
 
 //------------------------------------------------------------------------------
 // ... or load them from a file
@@ -360,7 +360,7 @@ while true do
 end while;
 
 //------------------------------------------------------------------------------
-// Create all the triples
+// Create the triples of type (a) and (b)
 //------------------------------------------------------------------------------
 
 couples_l:=SetToSequence(couples);
@@ -428,7 +428,7 @@ for t in triples do
 end for;
 
 //------------------------------------------------------------------------------
-// By counting the common projection we complete cases (a) and (b)
+// By counting the common projections we distinguish case (a) and (b)
 //------------------------------------------------------------------------------
 
 list12:={};
@@ -480,8 +480,6 @@ for t in perfect_triples do
 	end for;
 
 end for;
-
-// IMPORTANT: at this point only cases (a) and (b) are complete
 
 case_a := perfect_triples diff (list12 join list13 join list23);
 case_b := (list12 join list13 join list23) diff ((list12 meet list13) join (list12 meet list23) join (list13 meet list23));
