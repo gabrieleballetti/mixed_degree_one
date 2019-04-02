@@ -360,7 +360,7 @@ while true do
 end while;
 
 //------------------------------------------------------------------------------
-// Create the triples of type (a) and (b)
+// Create the triples of type (i) and (ii)
 //------------------------------------------------------------------------------
 
 couples_l:=SetToSequence(couples);
@@ -427,9 +427,9 @@ for t in triples do
 	end if;
 end for;
 
-//------------------------------------------------------------------------------
-// By counting the common projections we distinguish case (a) and (b)
-//------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------
+// By counting the common projections we distinguish case (i) (case_a) and (ii) (case_b)
+//---------------------------------------------------------------------------------------
 
 list12:={};
 list23:={};
@@ -487,10 +487,10 @@ case_b := (list12 join list13 join list23) diff ((list12 meet list13) join (list
 #case_a;// 29
 #case_b;// 141
 
-// saved on case_a.txt and case_b.txt
+// saved on case_i.txt and case_ii.txt
 
 //------------------------------------------------------------------------------
-// case (c)
+// case (iii) (case_c)
 //------------------------------------------------------------------------------
 lawrence_prisms:={};
 i:=0;
@@ -577,5 +577,5 @@ end for;
 case_c := perfect_triples_case_c;
 #case_c; \\82
 
-// saved on case_c.txt
+// saved on case_iii.txt
 
